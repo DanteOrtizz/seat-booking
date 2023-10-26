@@ -127,3 +127,7 @@ body {
 p.text span {
     color: var(--highlight);
 }
+
+p.text  {
+    margin: 5px 0;
+}
