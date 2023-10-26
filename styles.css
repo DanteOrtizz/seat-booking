@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --background: #55423d;
+    --headline: #fffffe;
+    --paragraph: #fff3ec;
+    --button-text: #271c19;
+    --main: #fff3ec;
+    --secondary: #ffc0ad;
+    --highlight: #e78fb3;
+    --stroke: #140d0b;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'AR One Sans', sans-serif;
+    color: var(--headline);
+    font-weight: 600;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.movie-container {
+    margin: 20px 0; 
+}
+
+.movie-container select {
+    background-color: var(--headline);
+    border: solid 3px var(--stroke);
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'AR One Sans', sans-serif;
+    font-weight: 600;
+    color: var(--button-text);
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    appearance: none;
+    outline: none;
+}
+
+.movie-container select:hover {
+    cursor: pointer;
+}
+
+.container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+.seat {
+    background-color: var(--secondary);
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.seat:nth-of-type(2) {
+    margin-right: 18px;
+}
+
+.seat:nth-last-of-type(2) {
+    margin-left: 18px;
+}
+
+.seat.selected {
+    background-color: var(--highlight);
+}
+
+.seat.occupied {
+    background-color: var(--button-text);
+}
+
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+}
+
+.row {
+    display: flex;
+}
+
+.showcase {
+    background-color: var(--headline);
+    border: solid 3px var(--stroke);
+    border-radius: 5px;
+    color: var(--button-text);
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.showcase li small {
+    margin-left: 2px;
+}
+
+.screen {
+    background-color: var(--headline);
+    height: 70px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-45deg);
+    border-radius: 2px;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text span {
+    color: var(--highlight);
+}
